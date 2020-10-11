@@ -5,7 +5,7 @@ const errors = [
     'Proxy offline'
 ];
 
-const proxy_check = async p => {
+const proxy_check = p => {
 
     return new Promise((resolve, reject) => {
 
