@@ -24,6 +24,8 @@ const proxy_check = async p => {
                 } else {
                     return reject(errors[0]);
                 }
+            } else {
+                proxy = p;
             }
         }
 
