@@ -1,4 +1,4 @@
-# Check proxy
+# Check proxy for NodeJS
 
 ```javascript
 const proxy_check = require('proxy-check');
@@ -14,7 +14,7 @@ const proxy = {
 proxy_check(proxy).then(r => {
   console.log(r); // true
 }).catch(e => {
-  console.error(e); // Proxy offline
+  console.error(e); // ECONNRESET
 });
 ```
 
