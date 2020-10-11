@@ -13,11 +13,11 @@ const proxy = {
   proxyAuth: ''
 };
 
-if (typeOf p === 'object') {
+if (typeof p === 'object') {
   if (Array.isArray(p)) {
-    if (typeOf p[0] === 'object') {
+    if (typeof p[0] === 'object') {
       proxy = p[0];
-    } else if (typeOf p === 'string') {
+    } else if (typeof p === 'string') {
       p = p[0];
     } else {
       return Promise.reject(errors[0]);
@@ -25,7 +25,7 @@ if (typeOf p === 'object') {
   }
 }
 
-if (typeOf p === 'string') {
+if (typeof p === 'string') {
   if (p.indexOf('@') + 1) {
       proxy.proxyAuth = p.split('@')[0];
       const host_port = p.split('@')[1];
