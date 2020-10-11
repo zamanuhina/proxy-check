@@ -66,6 +66,7 @@ const proxy_check = async p => {
 
         const req = http.request(proxy_options);
         req.on('connect', res => {
+            req.destroy();
             if (res.statusCode === 200) {
                 return resolve(true);
             } else {
