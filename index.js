@@ -9,7 +9,7 @@ const proxy_check = p => {
 
     return new Promise((resolve, reject) => {
 
-        const proxy = {
+        let proxy = {
             host: '',
             port: 0,
             proxyAuth: ''
